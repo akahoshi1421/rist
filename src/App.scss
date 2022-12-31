@@ -1,0 +1,64 @@
+.load-anime {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  z-index: 9;
+
+  animation: fadeoutAnime 0.3s ease forwards;
+  animation-delay: 4s;
+
+  background-color: rgb(5, 5, 49);
+  pointer-events: none;
+
+  .zeroone {
+    font-size: 2vw;
+    color: rgb(12, 76, 12);
+    word-break: break-all;
+    pointer-events: none;
+  }
+
+  .rist-title {
+    position: absolute;
+    font-weight: 400;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    color: rgb(44, 44, 189);
+    pointer-events: none;
+  }
+
+  .wrap-content {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 150vw;
+    height: 100vh;
+    width: 150vw;
+    background-color: rgb(42, 42, 123);
+    clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 95%, 0 5%);
+    animation: wrapanime 0.5s ease forwards;
+    animation-delay: 2.5s;
+    pointer-events: none;
+  }
+}
+
+@keyframes wrapanime {
+  0% {
+    left: 150vw;
+  }
+  100% {
+    left: -50vw;
+  }
+}
+
+@keyframes fadeoutAnime {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

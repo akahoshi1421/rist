@@ -1,0 +1,152 @@
+$body-color: rgb(42, 42, 123);
+$myWhite: rgb(199, 209, 245);
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(72, 72, 197);
+  opacity: 0;
+  z-index: 7;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  transition: opacity 0.6s ease;
+
+  &.fadeIn {
+    opacity: 0.98;
+  }
+
+  .logo-img {
+    width: 20%;
+    font-size: 50px;
+    padding-left: 15px;
+    color: #fff;
+  }
+  .linkes {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    .linkes-inner {
+      font-size: 30px;
+      color: rgb(232, 231, 251);
+      cursor: pointer;
+
+      position: relative;
+      overflow: visible;
+      transition: all 0.3s ease;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        color: rgb(127, 132, 201);
+        &::before {
+          background-color: rgb(127, 132, 201);
+          width: 150%;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  // background-color: $body-color;
+  background: rgb(42, 42, 123);
+  background: linear-gradient(
+    180deg,
+    rgba(42, 42, 123, 1) 0%,
+    rgba(13, 18, 61, 1) 100%
+  );
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.no0-content {
+  height: 100vh;
+  position: relative;
+  .down-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -10px);
+    height: 60px;
+    width: 2px;
+    background-color: $myWhite;
+    animation: arrowAnime 1.5s ease infinite;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 5px;
+      height: 20px;
+      width: 2px;
+      transform: rotate(30deg);
+      background-color: $myWhite;
+    }
+    .down-arrow-text {
+      position: absolute;
+      right: -50%;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      color: $myWhite;
+    }
+  }
+}
+#titleRogoImg {
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: contain;
+  animation: fadeInAnime 0.3s ease forwards;
+  animation-delay: 3.3s;
+  z-index: 1;
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    height: 80px;
+    .logo-img {
+      font-size: 20px;
+    }
+    .linkes {
+      .linkes-inner {
+        font-size: 15px;
+      }
+    }
+  }
+  #titleRogoImg {
+    transform: scale(1.6);
+  }
+}
+
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes arrowAnime {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}

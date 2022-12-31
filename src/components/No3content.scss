@@ -1,0 +1,82 @@
+$myWhite: #ffffff;
+
+.no3-content {
+  height: 100vh;
+  position: relative;
+  .content-discription {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 70%;
+    background-color: $myWhite;
+    border: 6px solid rgb(27, 144, 228);
+    border-radius: 10px;
+    opacity: 0.8;
+
+    .no3-titles {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+
+      .chapter {
+        text-align: center;
+        padding: 10px;
+        font-size: 25px;
+        width: 35%;
+        background-color: rgb(27, 144, 228);
+        color: $myWhite;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        &:hover {
+          opacity: 0.6;
+        }
+
+        &.active {
+          background-color: $myWhite;
+          color: rgb(27, 144, 228);
+        }
+      }
+    }
+    .discription-main {
+      position: relative;
+      height: 100%;
+      .not-img {
+        height: 30%;
+        h3 {
+          font-size: 25px;
+          margin: 3px 10px;
+        }
+        p {
+          font-size: 16px;
+          margin: 3px 10px;
+        }
+      }
+      .imgs {
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        img {
+          width: 50vh;
+          height: fit-content;
+          z-index: 4;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .no3-content .content-discription .discription-main .imgs {
+    justify-content: left;
+    img {
+      width: 325px;
+    }
+  }
+}
