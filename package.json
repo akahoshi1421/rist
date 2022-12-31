@@ -39,6 +39,7 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "https://akahoshi1421.github.io/rist",
   "devDependencies": {
     "cross-env": "^7.0.3",
     "gh-pages": "^4.0.0"
