@@ -26,6 +26,13 @@ const No3content = () => {
   ];
 
   const setDis = (chapter) => {
+    const dsmain = document.querySelector(".discription-main");
+    dsmain.classList.remove("fadeIn");
+
+    setTimeout(() => {
+      dsmain.classList.add("fadeIn");
+    }, 400);
+
     const chapteres = document.querySelectorAll(".chapter");
     chapteres.forEach((element) => {
       element.classList.remove("active");
@@ -51,7 +58,7 @@ const No3content = () => {
             3
           </div>
         </div>
-        <div className="discription-main">
+        <div className="discription-main fadeIn">
           <div className="not-img">
             <h3 className="chapter-title">{serifList[nowChapter - 1].title}</h3>
             <p>{serifList[nowChapter - 1].discription}</p>
