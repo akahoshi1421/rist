@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect } from "react";
 import "./No2content.scss";
 
@@ -23,6 +24,26 @@ const No2content = () => {
     imgs.forEach((head) => {
       io.observe(head);
     });
+
+    const io2 = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const No2_TITLE = setInterval(() => {
+            let result = "";
+            for (let i = 0; i < 11; i++) {
+              result += Math.random().toString(32).substring(2)[0];
+            }
+            entry.target.textContent = result;
+          }, 50);
+          setTimeout(() => {
+            clearInterval(No2_TITLE);
+            entry.target.textContent = "君は無事に使いこなせるか";
+          }, 300);
+        }
+      }, options);
+    });
+    const No2H2 = document.querySelector(".no2-title");
+    io2.observe(No2H2);
   }, []);
 
   return (

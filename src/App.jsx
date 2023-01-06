@@ -1,3 +1,4 @@
+import React from "react";
 import "./Reset.scss";
 import "./App.scss";
 import { useEffect } from "react";

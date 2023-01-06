@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect } from "react";
 import "./No1content.scss";
 
@@ -25,6 +26,27 @@ const No1content = () => {
     imgs.forEach((head) => {
       io.observe(head);
     });
+
+    const io2 = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const No1_TITLE = setInterval(() => {
+            let result = "";
+            for (let i = 0; i < 24; i++) {
+              result += Math.random().toString(32).substring(2)[0];
+            }
+            entry.target.textContent = result;
+          }, 50);
+          setTimeout(() => {
+            clearInterval(No1_TITLE);
+            entry.target.textContent =
+              "SNSのトラブルに巻き込まれていく主人公達...";
+          }, 300);
+        }
+      }, options);
+    });
+    const No1H2 = document.querySelector(".no1-title");
+    io2.observe(No1H2);
   }, []);
 
   return (

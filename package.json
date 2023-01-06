@@ -42,6 +42,8 @@
   "homepage": "https://akahoshi1421.github.io/rist",
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "eslint": "^8.31.0",
+    "eslint-plugin-react": "^7.31.11",
     "gh-pages": "^4.0.0"
   }
 }

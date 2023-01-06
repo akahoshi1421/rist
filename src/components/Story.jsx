@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect } from "react";
 import "./Story.scss";
 
@@ -13,6 +14,18 @@ const Story = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("fadeIn");
+
+          const STORY_TITLE = setInterval(() => {
+            let result = "";
+            for (let i = 0; i < 4; i++) {
+              result += Math.random().toString(32).substring(2)[0];
+            }
+            entry.target.textContent = result;
+          }, 50);
+          setTimeout(() => {
+            clearInterval(STORY_TITLE);
+            entry.target.textContent = "STORY";
+          }, 300);
         } else {
           entry.target.classList.remove("fadeIn");
         }

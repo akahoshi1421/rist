@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import "./No3content.scss";
 

@@ -1,3 +1,4 @@
+import React from "react";
 import Rogo from "../img/titleRogo.png";
 import "./Container.scss";
 import No1content from "./No1content";
@@ -71,8 +72,8 @@ const Container = () => {
       <div className="container">
         <div className="no0-content">
           <img src={Rogo} id="titleRogoImg" />
-          <div class="down-arrow">
-            <div class="down-arrow-text">scroll</div>
+          <div className="down-arrow">
+            <div className="down-arrow-text">scroll</div>
           </div>
         </div>
 

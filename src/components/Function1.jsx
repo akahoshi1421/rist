@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect } from "react";
 import "./Function1.scss";
 
@@ -13,6 +14,18 @@ const Function1 = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("fadeIn");
+
+          const FUNCTION_TITLE = setInterval(() => {
+            let result = "";
+            for (let i = 0; i < 4; i++) {
+              result += Math.random().toString(32).substring(2)[0];
+            }
+            entry.target.textContent = result;
+          }, 50);
+          setTimeout(() => {
+            clearInterval(FUNCTION_TITLE);
+            entry.target.textContent = "FUNCTION";
+          }, 300);
         } else {
           entry.target.classList.remove("fadeIn");
         }
