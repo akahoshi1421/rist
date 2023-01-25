@@ -44,14 +44,14 @@ const Container = () => {
               Story
             </Scroll>
           </div>
-          <div className="story-func-link linkes-inner">
+          <div className="impetus-link linkes-inner">
             <Scroll
-              to="linkes-function"
+              to="linkes-impetus"
               smooth={true}
               duration={600}
               offset={-80}
             >
-              Function
+              Impetus
             </Scroll>
           </div>
           <div className="chapter-link linkes-inner">
@@ -64,9 +64,24 @@ const Container = () => {
               Chapter
             </Scroll>
           </div>
-          <div className="play-link linkes-inner">
-            <Scroll to="linkes-play" smooth={true} duration={600}>
-              Play
+          <div className="story-func-link linkes-inner">
+            <Scroll
+              to="linkes-function"
+              smooth={true}
+              duration={600}
+              offset={-80}
+            >
+              Function
+            </Scroll>
+          </div>
+          <div className="progress-func-link linkes-inner">
+            <Scroll
+              to="linkes-progress"
+              smooth={true}
+              duration={600}
+              offset={-80}
+            >
+              Progress&Plan
             </Scroll>
           </div>
         </div>

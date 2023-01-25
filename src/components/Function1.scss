@@ -1,5 +1,5 @@
 .function1-content {
-  height: 200vh;
+  min-height: 200vh;
   margin-bottom: 20vh;
   h2 {
     font-size: 60px;
@@ -78,7 +78,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 660px) {
   .function1-content {
     h2 {
       font-size: 40px;
@@ -94,6 +94,14 @@
         width: 80%;
         font-size: 15px;
       }
+    }
+  }
+}
+
+@for $i from 1 to 200 {
+  @media screen and (max-height: calc(720px - #{$i} * 3.5px)) {
+    .function1-content {
+      height: calc(200vh + #{$i} * 2vh);
     }
   }
 }

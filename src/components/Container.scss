@@ -27,11 +27,12 @@ header {
   .linkes {
     width: 80%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     position: relative;
     .linkes-inner {
-      font-size: 30px;
+      font-size: 23px;
       color: rgb(232, 231, 251);
       cursor: pointer;
 
@@ -113,7 +114,15 @@ header {
   z-index: 1;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 720px) {
+  header {
+    .logo-img {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
   header {
     height: 80px;
     .logo-img {
@@ -121,7 +130,7 @@ header {
     }
     .linkes {
       .linkes-inner {
-        font-size: 15px;
+        font-size: 17px;
       }
     }
   }
