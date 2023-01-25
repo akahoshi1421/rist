@@ -6,7 +6,9 @@ import No2content from "./No2content";
 import No3content from "./No3content";
 import No4content from "./No4content";
 import Function1 from "./Function1";
+import Impetus from "./Impetus";
 import Story from "./Story";
+import Progress from "./Progress";
 import { useEffect } from "react";
 import { Link as Scroll } from "react-scroll";
 
@@ -80,8 +82,10 @@ const Container = () => {
         <No1content />
         <No2content />
         <Story />
-        <Function1 />
+        <Impetus />
         <No3content />
+        <Function1 />
+        <Progress />
         <No4content />
       </div>
     </>

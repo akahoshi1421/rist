@@ -1,15 +1,52 @@
 $myWhite: #ffffff;
 
 .no3-content {
-  height: 100vh;
+  height: 150vh;
   position: relative;
+  .no3-content-flex {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      display: block;
+      font-size: 60px;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      text-shadow: -1px 8px 10px rgba(21, 20, 20);
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.6s ease;
+        transition-delay: 0.3s;
+      }
+
+      &.fadeIn::before {
+        width: 80%;
+      }
+    }
+
+    .chapter-discription {
+      width: 85%;
+      font-size: 25px;
+      color: #fff;
+    }
+  }
   .content-discription {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 85%;
-    height: 70%;
+    min-height: 430px;
     background-color: $myWhite;
     border: 6px solid rgb(27, 144, 228);
     border-radius: 10px;
@@ -83,5 +120,12 @@ $myWhite: #ffffff;
     img {
       width: 325px;
     }
+  }
+  .no3-content .no3-content-flex .chapter-discription {
+    font-size: 15px;
+  }
+
+  .no3-content .no3-content-flex h2 {
+    font-size: 40px;
   }
 }
