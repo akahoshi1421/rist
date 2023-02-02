@@ -59,10 +59,10 @@ const Progress = () => {
       <div className="progress-flex">
         <div className="one">シナリオ作成(~7/6)</div>
         <div className="one">サイトモックアップ(~7/20)</div>
-        <div className="one">INIAD-FES申請(~7/31)</div>
+        <div className="one">大学祭申請(~7/31)</div>
         <div className="one">実装(~8/31)</div>
         <div className="one">ユーザテスト(~10/15)</div>
-        <div className="one">INIIAD-FES(10/30~10/31)</div>
+        <div className="one">大学祭(10/30~10/31)</div>
         <div className="one">ユーザデータ解析(~11/30)</div>
         <div className="one">最終報告書作成(~1/18)</div>
       </div>

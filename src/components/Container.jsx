@@ -81,7 +81,17 @@ const Container = () => {
               duration={600}
               offset={-80}
             >
-              Progress&Plan
+              Progress
+            </Scroll>
+          </div>
+          <div className="resukt-func-link linkes-inner">
+            <Scroll
+              to="linkes-result"
+              smooth={true}
+              duration={600}
+              offset={-80}
+            >
+              Result
             </Scroll>
           </div>
         </div>
